@@ -1,0 +1,32 @@
+<mat-card class="example-card">
+    <mat-card-header>
+<img mat-card-avatar src="https://t4.ftcdn.net/jpg/05/55/02/61/360_F_555026179_L08M3AsMS0s3i8uganMQe2r2lbwco0rn.jpg" alt="">
+      <mat-card-title>{{reciepe.user.fullName}}</mat-card-title>
+      <mat-card-subtitle>code_with_rohith</mat-card-subtitle>
+    </mat-card-header>
+    <img class="max-h-[400px] object-cover "mat-card-image [src]="reciepe.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{reciepe.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="flex justify-between">
+    <div>
+      <button mat-icon-button aria-label="Example icon button with a home icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button (click)="handleOpenEditReciepeform()" mat-icon-button aria-label="Example icon button with a home icon">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Example icon button with a home icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button (click)="handleDeleteReciepe()"mat-icon-button aria-label="Example icon button with a home icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    </mat-card-actions>
+  </mat-card>
+  
